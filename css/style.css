@@ -1,0 +1,181 @@
+/*
+Author: Landon Dorrier
+Description: CSS styles for the Ivy Masonry Gallery plugin.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Featherlight -> http://noelboss.github.io/featherlight/
+
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Gallery
+# Masonry Grid
+# Featherlight
+# Media Queries
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+# Gallery
+--------------------------------------------------------------*/
+.gallery {
+	margin: 0;
+}
+
+.gallery-item {
+	display: inline-block;
+ 	text-align: center;
+ 	vertical-align: top;
+ 	width: 100%;
+	max-width: 100%;
+    margin: 0 0 15px 0;
+}
+
+.gallery-icon {
+	transition: .2s;	
+}
+
+.gallery-icon:hover {
+	transition: .2s;
+    opacity: .9;
+}
+
+.gallery-icon img {
+	margin: 0 auto;
+	display: block;
+    max-width: 100%;
+	width: 100%;
+    height: auto;
+}
+
+.gallery-caption {
+	color: #4d4b4b;
+    display: block;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 1.5;
+    padding: 5px;
+}
+
+.gallery-columns-6 .gallery-caption,
+.gallery-columns-7 .gallery-caption,
+.gallery-columns-8 .gallery-caption,
+.gallery-columns-9 .gallery-caption {
+	display: none;
+}
+
+
+
+/*--------------------------------------------------------------
+# Masonry Grid 
+--------------------------------------------------------------*/
+.gallery-columns-2 {
+ -webkit-column-count: 2;
+ -moz-column-count: 2;
+ column-count: 2;
+}
+.gallery-columns-3 {
+ -webkit-column-count: 3;
+ -moz-column-count: 3;
+ column-count: 3;
+}
+.gallery-columns-4 {
+ -webkit-column-count: 4;
+ -moz-column-count: 4;
+ column-count: 4;
+}
+.gallery-columns-5 {
+ -webkit-column-count: 5;
+ -moz-column-count: 5;
+ column-count: 5;
+}
+.gallery-columns-6 {
+ -webkit-column-count: 6;
+ -moz-column-count: 6;
+ column-count: 6;
+}
+.gallery-columns-7 {
+ -webkit-column-count: 7;
+ -moz-column-count: 7;
+ column-count: 7;
+}
+.gallery-columns-8 {
+ -webkit-column-count: 8;
+ -moz-column-count: 8;
+ column-count: 8;
+}
+.gallery-columns-9 {
+ -webkit-column-count: 9;
+ -moz-column-count: 9;
+ column-count: 9;
+}
+
+
+/*--------------------------------------------------------------
+# Featherlight
+--------------------------------------------------------------*/
+.featherlight img.wp-smiley, .featherlight img.emoji {
+    display: none !important;
+}
+.featherlight .featherlight-content {
+	padding: 15px 15px 0;
+    border-bottom: 15px solid transparent;	
+}
+.featherlight-previous {
+    left: 15px;
+	top: 15px;
+    right: 80%;
+}
+.featherlight-next {
+    right: 15px;
+	top: 15px;
+    left: 80%;
+}
+.featherlight .featherlight-close-icon {
+	background: rgba(255,255,255,1);
+}
+.featherlight-previous, .featherlight-next,
+.featherlight-previous:hover, .featherlight-next:hover {
+	background: none;	
+}
+.featherlight-previous span, .featherlight-next span {
+	display: inline-block;	
+	margin-top: -51px;
+}
+.featherlight-previous span:before, .featherlight-next span:before {		
+	font-size: 72px;
+    text-shadow: none;
+    opacity: .7;
+}
+.featherlight-previous:hover span:before, .featherlight-next:hover span:before {
+	opacity: 1;	
+}
+.featherlight-previous span:before {
+	content: '\2039';	
+}
+.featherlight-next span:before {
+	content: '\203a';	
+}
+.featherlight .featherlight-image {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+
+/*--------------------------------------------------------------
+# Media Queries
+--------------------------------------------------------------*/
+@media screen and (max-width: 991px) {
+	.gallery-columns-3 {
+		-webkit-column-count: 2;
+		-moz-column-count: 2;
+		column-count: 2;
+	}	
+}
